@@ -64,8 +64,8 @@ install_generated_extension() {
   theme_type=$(jq -r '.type // "dark"' "$GENERATED_THEME")
   case $theme_type in
     light) ui_theme="vs" ;;
-    hc | hc-black) ui_theme="hc-black" ;;
-    hc-light) ui_theme="hc-light" ;;
+    hc | hc-black | hcDark) ui_theme="hc-black" ;;
+    hc-light | hcLight) ui_theme="hc-light" ;;
     *) ui_theme="vs-dark" ;;
   esac
 
